@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx">
+      import { useEffect, useState } from 'react'
+import './App.css'
+
+function Card({ title }) {
+  const [count, setCount] = useState(0); 
+  const [hasLiked, setHasLiked] = useState(false) 
+
+  useEffect(() => { 
+    console.log(`${title} has been liked: ${hasLiked}`);
+  }, [hasLiked]) 
+
+
+ 
+  
+  return (
+    <div 
+      className="card" 
+      onClick={() => setCount(count + 1)}  
+  
+      >        
+      <h2>{title} <br /> {count || null}</h2>
+      <button onClick={() => setHasLiked(!hasLiked)}>
+        {hasLiked ? 'Liked ❤️' : 'Like 👍'}
+      </button>
+    </div>
+  )
+}
+
+const App = () => {
+  return (
+    <div className="card-container">
+      <h2>Functional Arrow Component</h2>
+
+      <Card title="Avatar" />
+      <Card title="StarWars" />
+      <Card title="Talk to me" />
+    </div>
+  )
+}
+
+
+const spp=()=>{
+  return(
+    <main>
+      <div className="pattern">
+        <div className="wrapper">
+          <header>
+            <h1>Find <span className="text-gradient">Movies</span> you'll Enjoy without the Hassle</h1>
+          </header>
+          <p>search</p>
+        </div>
+   
+    </div>
+    </main>
+    
+   
+  )
+}
+export default App
+    </script>
+  </body>
+</html>
