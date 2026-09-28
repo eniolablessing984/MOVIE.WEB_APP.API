@@ -6,7 +6,7 @@ import {MovieCard} from './component/MovieCard'
 
 
 const API_BASE_URL='https://api.themoviedb.org/3'
-const API_KEY=import.meta.env.VITE_TMDB_API_KEY;
+const API_KEY=import.meta.env.TMDB_API_KEY;
  const API_OPTIONS={
   method:'GET',
   headers:{
