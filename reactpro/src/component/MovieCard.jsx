@@ -1,7 +1,4 @@
 import React from 'react'
-
-
-
   export const MovieCard=({movie:{title, vote_average,poster_path,release_date,original_language,video}}) => {
     return(
         <div className="movie-card">

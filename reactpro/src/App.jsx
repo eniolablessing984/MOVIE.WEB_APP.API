@@ -1,6 +1,6 @@
-
+import React from "react";
 import { useState,useEffect} from "react"
-import { Search } from "./component/search"
+import { Search } from "./component/search";
 import { Spinner } from "./component/Spinner";
 import {MovieCard} from './component/MovieCard'
 
